@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "UserTasks";
+}
+
+<h2>User's Tasks</h2>
+
+<table>
+    <tr>
+        <th class="col-md-3">Description </th>
+        <th class="col-md-2">Due Date </th>
+        <th class="col-md-1">Completion Status </th>
+        <th class="col-md-3">Task Owners Name </th>
+        <th class="col-md-3">Task Owners Email </th>
+
+    </tr>
+    @for (int i = 0; i < ViewBag.Tasks.Count; i++)
+    {
+    <tr>
+        <td class="col-md-3"> @ViewBag.Tasks[i].Description</td>
+        <td class="col-md-2"> @ViewBag.Tasks[i].DueDate</td>
+        <td class="col-md-1"> @ViewBag.Tasks[i].CompletionStatus</td>
+        <td class="col-md-3"> @ViewBag.Tasks[i].User.Name</td>
+        <td class="col-md-3"> @ViewBag.Tasks[i].User.Email</td>
+    </tr>
+    }
+</table>

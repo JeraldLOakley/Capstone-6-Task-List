@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Search for tasks</h1>
+    <p>Use the search bar to search for task owners names and display their tasks</p>
+  
+</div>
+
+<form action=" /Tasks/UserTasks">
+    <input type="text" name="Name" />
+    <input type="submit" value="List Items" class="btn btn-primary" />
+</form>
